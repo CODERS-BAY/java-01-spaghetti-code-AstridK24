@@ -14,31 +14,36 @@ public class Geometrics {
     private static int z3 = 69;
 
     public static void main(String[] args) {
+        SquareArea(x );
+        SquarePerimeter(y);
+        RectangleArea(x, y);
+        RectanglePerimeter(x, y);
+        
         // area ... Fläche
         System.out.println("Square area");
-        System.out.println("x * x = " + x * x);
-        System.out.println("x1 * x1 = " + x1 * x1);
-        System.out.println("x2 * x2 = " + x2 * x2);
-        System.out.println("y * y = " + y * y);
+        System.out.println(SquareArea(10.0 ));
+        System.out.println(SquareArea(8));
+        System.out.println(SquareArea(100));
+        System.out.println(SquareArea(5.0));
 
         // perimeter ... Umfang
         System.out.println("Square perimeter");
-        System.out.println("4 * x = " + 4 * x);
-        System.out.println("4 * x1 = " + 4 * x1);
-        System.out.println("4 * x2 = " + 4 * x2);
-        System.out.println("4 * y = " + 4 * y);
+        System.out.println(SquarePerimeter(10.0));
+        System.out.println(SquarePerimeter(8));
+        System.out.println(SquarePerimeter(100));
+        System.out.println(SquarePerimeter(5.0));
 
         System.out.println("Rectangle area");
-        System.out.println("x * y = " + x * y);
-        System.out.println("x1 * y1 = " + x1 * y1);
-        System.out.println("x2 * y2 = " + x2 * y2);
-        System.out.println("x3 * y3 = " + x3 * y3);
+        System.out.println(RectangleArea(10.0, 5.0));
+        System.out.println(RectangleArea(8, 7));
+        System.out.println(RectangleArea(57, 57));
+        System.out.println(RectangleArea(45, 89));
 
         System.out.println("Rectangle perimeter");
-        System.out.println("x + y = " + x + y);
-        System.out.println("x1 + y1 = " + x1 + y1);
-        System.out.println("x2 + y2 = " + x2 + y2);
-        System.out.println("x3 + y3 = " + x3 + y3);
+        System.out.println(RectanglePerimeter(10.0, 5.0));
+        System.out.println(RectanglePerimeter(8, 7));
+        System.out.println(RectanglePerimeter(100, 57));
+        System.out.println(RectanglePerimeter(45, 89));
 
         System.out.println("We can also calculate some volumes");
         /*
@@ -54,5 +59,17 @@ public class Geometrics {
 
         System.out.println("Ungula");
         System.out.println((double) (2 * x3 * z3) / 3);
+    }
+    public static double SquareArea (double x) {
+        return x*x;        
+    }
+    public static double SquarePerimeter(double y) {
+        return 4*y;
+    }
+    public static double RectangleArea(double x, double y) {
+        return x*y;
+    }
+    public static double RectanglePerimeter(double x, double y) {
+        return x+y;
     }
 }
